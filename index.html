@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מאיה לב | עיסוי תינוקות וייעוץ שינה</title>
+  <meta name="description" content="מאיה לב – מדריכת עיסוי תינוקות ויועצת שינה בגישה ההיקשרותית. סדנאות, מפגשים פרטיים וליווי אישי לאמהות ומשפחות." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Skip to main content for screen readers -->
+  <a href="#main-content" class="skip-link">דלג לתוכן הראשי</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="ניווט ראשי">
+    <div class="nav-inner">
+      <img src="images/logo-Photoroom.PNG" alt="מאיה לב" class="nav-logo" />
+      <ul class="nav-links">
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#services">שירותים</a></li>
+        <li><a href="#reviews">המלצות</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about">אודות</a></li>
+      <li><a href="#services">שירותים</a></li>
+      <li><a href="#reviews">המלצות</a></li>
+      <li><a href="#contact">צור קשר</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <main id="main-content">
+  <section class="hero" id="hero" aria-label="כותרת ראשית">
+    <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+    <div class="hero-bg" style="background-image: url('images/image_1.jpeg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-blobs">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-pulse" aria-hidden="true"></span>
+        מדריכת עיסוי תינוקות | יועצת שינה בגישה ההיקשרותית
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        <span class="line word-reveal">מרחב חם</span>
+        <span class="line accent-text word-reveal">לאמא ולתינוק</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-2">מגע נכון, שינה טובה, הורות רגועה בהקשבה ללב 🤍</p>
+      <div class="hero-cta reveal-up delay-3">
+        <a href="#contact" class="btn btn-primary magnetic-btn">
+          <span class="btn-text">בואי נדבר</span>
+          <span class="btn-ripple" aria-hidden="true"></span>
+        </a>
+        <a href="#services" class="btn btn-ghost">השירותים שלי</a>
+      </div>
+    </div>
+    <div class="hero-tags" aria-hidden="true">
+      <span class="hero-tag tag1">🤍 מגע מחבר</span>
+      <span class="hero-tag tag2">🌙 שינה בשקט</span>
+      <span class="hero-tag tag3">💛 הורות מהלב</span>
+      <span class="hero-tag tag4">🌿 גישה היקשרותית</span>
+      <span class="hero-tag tag5">✨ כפר ויתקין</span>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdf8f4"/>
+    </svg>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="about-decor-circle"></div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="img-card img-main reveal-left">
+            <img src="images/image_2.jpeg" alt="מאיה לב עם תינוק" />
+          </div>
+          <div class="img-card img-secondary reveal-left delay-1">
+            <img src="images/image_3.jpeg" alt="עיסוי תינוקות" />
+          </div>
+          <div class="floating-heart">🤍</div>
+        </div>
+        <div class="about-text reveal-right">
+          <div class="section-tag">אודותי</div>
+          <h2 id="about-heading">היי, אני מאיה לב-גואטה 👋</h2>
+          <p>בעלת תואר ראשון בפסיכולוגיה ותואר שני ביעוץ ארגוני. מדריכת עיסוי תינוקות ויועצת שינה בגישה ההיקשרותית. סטודנטית לליווי התפתחותי לתינוקות בצעד ראשון. אמא ל-2 קטנטנים צמודים, גרה בכפר ויתקין.</p>
+          <p>מאז שיצאתי לחופשת הלידה הראשונה שלי, הבנתי כמה משמעותי לפגוש עוד אמהות באותו המצב — להתייעץ, לשאול, ולקבל מעגל תומך. פעם היה נהוג לגדל ילדים בשבט, והיום זה כל כך חסר. אמהות רבות מרגישות את הבדידות הזו בחופשת לידה, עם כל האתגרים שגם ככה קיימים. מאז היה לי חלום לייצר מרחב חם לאמהות שיאפשר בדיוק את המקום הזה שאני הייתי זקוקה לו 💛</p>
+          <p>הכרתי את עולם העיסוי וגיליתי כמה יתרונות הוא נותן — ובעיקר כמה הוא חיבר אותי לתינוק שלי. הבנתי כמה המגע חשוב כבר מגיל לידה, ומשמעותי להמשך ההתפתחות וליצירת הביטחון. הבנתי שאני חייבת להעביר את זה הלאה, ופשוט חייב שעוד הורים יכירו את זה.</p>
+          <p>בתור אמא צעירה נחשפתי גם לכמה מאתגר נושא השינה — כמה כולם מבולבלים מכל המידע שמגיע מהרשת ומאנשים שרוצים להעיר. מתוך רצון פנימי גדול לשינוי, חקרתי לעומק את עולם ייעוץ השינה והבנתי שיש הרבה גישות. בחרתי בגישה ההיקשרותית — גישה שמקרבת הורים לאינטואיציה שלהם, ומלמדת להקשיב ללב. מאז אני מלווה משפחות שרוצות לעשות את השינוי הזה בביתן, ואמהות בחופשת לידה שמגיעות עם התינוק ונותנות לעצמן מתנה בתקופה המאתגרת הזאת.</p>
+          <div class="about-badges">
+            <span class="badge">פסיכולוגיה B.A</span>
+            <span class="badge">ייעוץ ארגוני M.A</span>
+            <span class="badge">עיסוי תינוקות</span>
+            <span class="badge">ייעוץ שינה</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-tag center">למה עיסוי?</div>
+      <h2 class="section-title center">יתרונות עיסוי תינוקות</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal-up">
+          <div class="feature-icon">🛡️</div>
+          <h3>חיזוק מערכת החיסון</h3>
+          <p>עיסוי סדיר תורם לחיזוק מערכת החיסון של התינוק ומגן עליו טוב יותר.</p>
+        </div>
+        <div class="feature-card reveal-up delay-1">
+          <div class="feature-icon">🌿</div>
+          <h3>הקלה על כאבי בטן וגזים</h3>
+          <p>תנועות עיסוי ממוקדות עוזרות להקל על אי-הנוחות של הקטן/ה.</p>
+        </div>
+        <div class="feature-card reveal-up delay-2">
+          <div class="feature-icon">🤧</div>
+          <h3>הקלה בצינון ונזלת</h3>
+          <p>טכניקות ייעודיות לשחרור מעל הסינוסים ולשיפור הנשימה.</p>
+        </div>
+        <div class="feature-card reveal-up delay-3">
+          <div class="feature-icon">💪</div>
+          <h3>חיזוק הביטחון</h3>
+          <p>היכרות עם גבולות הגוף ופיתוח ביטחון עצמי כבר מגיל אפס.</p>
+        </div>
+        <div class="feature-card reveal-up delay-1">
+          <div class="feature-icon">🤝</div>
+          <h3>קשר עמוק</h3>
+          <p>חיבור בלתי-אמצעי בין האמא לתינוק דרך כוח המגע.</p>
+        </div>
+        <div class="feature-card reveal-up delay-2">
+          <div class="feature-icon">🌙</div>
+          <h3>שיפור השינה</h3>
+          <p>עיסוי לפני שינה מרגיע את התינוק ומסייע לשגרת לילה טובה יותר.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="services-bg-decor"></div>
+    <div class="container">
+      <div class="section-tag center">מה אני מציעה</div>
+      <h2 class="section-title center" id="services-heading">השירותים שלי</h2>
+
+      <div class="services-wrapper">
+        <!-- Sleep -->
+        <div class="service-block reveal-up">
+          <div class="service-emoji">🌙</div>
+          <h3>ייעוץ שינה בגישה ההיקשרותית</h3>
+          <p class="service-desc">הגישה שמקרבת אתכם לאינטואיציה שלכם ומלמדת להקשיב ללב. לא שיטות קשות להרדמה — אלא הבנה של התינוק, סדר בשגרת היום, וליווי אישי לאורך כל הדרך.</p>
+          <div class="service-options">
+            <div class="service-option">
+              <div class="option-icon">📅</div>
+              <div>
+                <strong>תהליך מלא – 3 שבועות עד חודש</strong>
+                <p>ליווי יום-יומי אישי, התאמה לצרכי המשפחה, מיפוי השגרה, הפחתת התעוררויות בלילה, תמיכה רציפה עד השינוי.</p>
+              </div>
+            </div>
+            <div class="service-option">
+              <div class="option-icon">⚡</div>
+              <div>
+                <strong>פגישה חד-פעמית</strong>
+                <p>ייעוץ נקודתי, מענה על שאלות בוערות והמלצות להמשך הדרך האישית שלכם.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-divider"></div>
+
+        <!-- Massage -->
+        <div class="service-block reveal-up delay-1">
+          <div class="service-emoji">🤲</div>
+          <h3>עיסוי תינוקות</h3>
+          <p class="service-desc">מתנה לכם ולתינוק שתישארו איתה שנים קדימה. לימוד טכניקות עיסוי שיכולות להוות כלי קבוע בחיי המשפחה.</p>
+          <div class="service-options">
+            <div class="service-option">
+              <div class="option-icon">👩‍👩‍👧</div>
+              <div>
+                <strong>סדנת עיסוי תינוקות – 3 מפגשים</strong>
+                <p>בביתי בכפר ויתקין. לימוד כלי העיסוי, הקלה על התינוק, היכרות עם אמהות בחל"ד, שיח, קפה ופינוקים, קבוצת וואטסאפ ומענה שוטף.</p>
+              </div>
+            </div>
+            <div class="service-option">
+              <div class="option-icon">🏠</div>
+              <div>
+                <strong>מפגש פרטי בבית שלך</strong>
+                <p>שיעור פרטי עם דגש על הצרכים הספציפיים של התינוק לפי גיל ושלב התפתחותי. מומלץ לחלק לשני מפגשים.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews-section" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-tag center">מה אומרות עלי</div>
+      <h2 class="section-title center" id="reviews-heading">המלצות 💬</h2>
+      <p class="reviews-sub">לחצו על ביקורת כדי לראות אותה במלואה</p>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="תצוגת ביקורת" aria-hidden="true">
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <img src="" alt="ביקורת" id="lightboxImg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-card reveal-up">
+        <div class="story-quote">"</div>
+        <p>הכרתי את עולם העיסוי וכמה יתרונות זה נותן. בעיקר — כמה הוא מחבר אותי לתינוק שלי. הבנתי כמה המגע חשוב כבר מגיל לידה ומשמעותי להמשך ההתפתחות ויצירת הביטחון. הבנתי שאני חייבת להעביר את זה הלאה, ופשוט חייב שעוד הורים יכירו את זה.</p>
+        <div class="story-author">— מאיה לב-גואטה</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-right">
+          <div class="section-tag">דברו איתי</div>
+          <h2 id="contact-heading">רוצות לשמוע עוד?</h2>
+          <p>השאירו פרטים ואחזור אליכן בהקדם 🌸</p>
+          <div class="contact-details">
+            <a href="tel:0525541655" class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span>052-554-1655</span>
+            </a>
+            <a href="https://www.instagram.com/maya__lev?igsh=Znd1M3E4ZDAzOXUx&utm_source=qr" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">📸</span>
+              <span>@maya__lev</span>
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/maya__lev?igsh=Znd1M3E4ZDAzOXUx&utm_source=qr" target="_blank" rel="noopener" class="social-btn instagram" aria-label="אינסטגרם">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              אינסטגרם
+            </a>
+            <a href="https://wa.me/972525541655" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="וואטסאפ">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              וואטסאפ
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">שם מלא</label>
+              <input type="text" id="name" name="name" placeholder="מה שמך?" required aria-required="true" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="phone">מספר טלפון</label>
+              <input type="tel" id="phone" name="phone" placeholder="050-000-0000" required aria-required="true" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="service">מה מעניין אותך?</label>
+              <select id="service" name="service">
+                <option value="">בחרי שירות...</option>
+                <option>סדנת עיסוי תינוקות</option>
+                <option>מפגש עיסוי פרטי</option>
+                <option>תהליך ייעוץ שינה</option>
+                <option>פגישת ייעוץ שינה חד-פעמית</option>
+                <option>לא בטוחה עדיין</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">הודעה</label>
+              <textarea id="message" name="message" placeholder="ספרי לי קצת עליך ועל התינוק..." rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">שלחי הודעה 💌</button>
+            <div class="form-success" id="formSuccess">תודה! אחזור אלייך בהקדם 🌸</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <img src="images/logo-Photoroom.PNG" alt="מאיה לב" class="footer-logo" />
+      <p>מדריכת עיסוי תינוקות | יועצת שינה בגישה ההיקשרותית</p>
+      <p class="footer-copy">© 2026 מאיה לב | כל הזכויות שמורות</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
