@@ -130,8 +130,9 @@ const totalReviews = 11;
 for (let i = 1; i <= totalReviews; i++) {
   const thumb = document.createElement('div');
   thumb.className = 'review-thumb reveal-up';
-  if (i % 3 === 2) thumb.classList.add('delay-1');
-  if (i % 3 === 0) thumb.classList.add('delay-2');
+  // Staggered delay across the grid (cycle through 4 delay levels)
+  const delayClass = ['', 'delay-1', 'delay-2', 'delay-3'][(i - 1) % 4];
+  if (delayClass) thumb.classList.add(delayClass);
   thumb.setAttribute('role', 'button');
   thumb.setAttribute('tabindex', '0');
   thumb.setAttribute('aria-label', `ביקורת ${i} – לחצי לפתיחה`);
