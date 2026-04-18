@@ -125,7 +125,7 @@ revealEls.forEach(el => revealObserver.observe(el));
 // REVIEWS GRID
 // ===========================
 const reviewsGrid = document.getElementById('reviewsGrid');
-const totalReviews = 11;
+const totalReviews = 12;
 
 for (let i = 1; i <= totalReviews; i++) {
   const thumb = document.createElement('div');
