@@ -40,50 +40,47 @@
   <main id="main-content">
   <section class="hero" id="hero" aria-label="כותרת ראשית">
     <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
-    <div class="hero-bg" style="background-image: url('images/image_1.jpeg');"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-blobs">
-      <div class="blob blob1"></div>
-      <div class="blob blob2"></div>
-      <div class="blob blob3"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge reveal-up">
-        מדריכת עיסוי תינוקות | יועצת שינה בגישה ההיקשרותית
+
+    <div class="hero-split">
+      <!-- Text side -->
+      <div class="hero-text-side">
+        <div class="hero-eyebrow reveal-up">מדריכת עיסוי תינוקות | יועצת שינה בגישה ההיקשרותית</div>
+        <h1 class="hero-title reveal-up delay-1">
+          <span class="line-plain">מרחב חם</span>
+          <span class="line-accent">לאמא ולתינוק</span>
+        </h1>
+        <p class="hero-sub reveal-up delay-2">מגע נכון, שינה טובה, הורות רגועה בהקשבה ללב</p>
+        <div class="hero-cta reveal-up delay-3">
+          <a href="#contact" class="btn btn-primary">
+            <span class="btn-text">בואי נדבר</span>
+            <span class="btn-ripple" aria-hidden="true"></span>
+          </a>
+          <a href="#services" class="btn btn-outline-dark">השירותים שלי</a>
+        </div>
+        <div class="hero-tags" aria-hidden="true">
+          <span class="hero-tag tag1">מגע מחבר</span>
+          <span class="hero-tag tag2">שינה בשקט</span>
+          <span class="hero-tag tag3">הורות מהלב</span>
+        </div>
       </div>
-      <h1 class="hero-title reveal-up delay-1">
-        <span class="line word-reveal">מרחב חם</span>
-        <span class="line accent-text word-reveal">לאמא ולתינוק</span>
-      </h1>
-      <p class="hero-sub reveal-up delay-2">מגע נכון, שינה טובה, הורות רגועה בהקשבה ללב</p>
-      <div class="hero-cta reveal-up delay-3">
-        <a href="#contact" class="btn btn-primary magnetic-btn">
-          <span class="btn-text">בואי נדבר</span>
-          <span class="btn-ripple" aria-hidden="true"></span>
-        </a>
-        <a href="#services" class="btn btn-ghost">השירותים שלי</a>
+
+      <!-- Image side -->
+      <div class="hero-image-side reveal-left delay-1">
+        <div class="hero-img-frame">
+          <img src="images/image_1.jpeg" alt="מאיה לב עם תינוק" class="hero-main-img" />
+          <div class="hero-img-deco-ring" aria-hidden="true"></div>
+          <div class="hero-img-badge" aria-hidden="true">
+            <span class="badge-icon">🤍</span>
+            <span>גישה היקשרותית</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hero-tags" aria-hidden="true">
-      <span class="hero-tag tag1">מגע מחבר</span>
-      <span class="hero-tag tag2">שינה בשקט</span>
-      <span class="hero-tag tag3">הורות מהלב</span>
-      <span class="hero-tag tag4">גישה היקשרותית</span>
-      <span class="hero-tag tag5">כפר ויתקין</span>
-    </div>
+
     <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
     </div>
   </section>
-
-  <!-- Wave Divider -->
-  <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fdf8f4"/>
-    </svg>
-  </div>
 
   <!-- ===== ABOUT ===== -->
   <section class="about" id="about" aria-labelledby="about-heading">
