@@ -502,11 +502,11 @@ a { text-decoration: none; color: inherit; }
 .img-card:hover::after { opacity: 1; }
 
 .img-main {
-  width: 70%; top: 0; right: 0; height: 370px; border: 6px solid white;
+  width: 70%; top: 0; right: 0; height: 370px;
   animation: imgFloatA 6s ease-in-out infinite;
 }
 .img-secondary {
-  width: 56%; bottom: 0; left: 0; height: 265px; border: 6px solid white; z-index: 2;
+  width: 56%; bottom: 0; left: 0; height: 265px; z-index: 2;
   animation: imgFloatB 7s ease-in-out infinite 1s;
 }
 @keyframes imgFloatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
