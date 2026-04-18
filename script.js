@@ -143,7 +143,7 @@ for (let i = 1; i <= totalReviews; i++) {
 
   const hint = document.createElement('div');
   hint.className = 'review-tap-hint';
-  hint.textContent = 'לחצי לפתיחה 👆';
+  hint.textContent = 'לחצי לפתיחה';
 
   thumb.appendChild(img);
   thumb.appendChild(hint);
