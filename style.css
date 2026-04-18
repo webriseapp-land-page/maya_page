@@ -93,8 +93,8 @@ a { text-decoration: none; color: inherit; }
   height: 72px; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  height: 54px; width: auto; object-fit: contain;
-  filter: drop-shadow(0 2px 8px rgba(176,125,94,0.2));
+  height: 64px; width: auto; object-fit: contain;
+  filter: none;
   transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
 }
 .nav-logo:hover { transform: scale(1.06) rotate(-1deg); }
