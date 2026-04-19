@@ -135,19 +135,19 @@ const TOTAL_REVIEWS = 12;
 // left% and top% are relative to .reviews-pile (100% wide, 560px tall)
 // rotation fans out like a spread hand of cards
 const pilePositions = [
-  { l:  2, t: 18, r: -22, z: 2 },
-  { l:  9, t:  8, r: -14, z: 3 },
-  { l: 18, t:  3, r:  -7, z: 4 },
-  { l: 28, t:  1, r:   0, z: 5 },
-  { l: 38, t:  2, r:   8, z: 6 },
-  { l: 48, t:  6, r:  15, z: 5 },
-  { l: 57, t: 14, r:  22, z: 4 },
+  { l:  4, t: 18, r: -22, z: 2 },
+  { l: 12, t:  8, r: -14, z: 3 },
+  { l: 21, t:  3, r:  -7, z: 4 },
+  { l: 31, t:  1, r:   0, z: 5 },
+  { l: 41, t:  2, r:   8, z: 6 },
+  { l: 51, t:  6, r:  15, z: 5 },
+  { l: 60, t: 14, r:  22, z: 4 },
   // second overlapping row slightly lower
-  { l:  6, t: 42, r: -18, z: 7 },
-  { l: 20, t: 34, r: -10, z: 8 },
-  { l: 33, t: 30, r:   3, z: 9 },
-  { l: 46, t: 32, r:  11, z: 8 },
-  { l: 59, t: 38, r:  20, z: 7 },
+  { l:  8, t: 42, r: -18, z: 7 },
+  { l: 22, t: 34, r: -10, z: 8 },
+  { l: 35, t: 30, r:   3, z: 9 },
+  { l: 48, t: 32, r:  11, z: 8 },
+  { l: 61, t: 38, r:  20, z: 7 },
 ];
 
 for (let i = 0; i < TOTAL_REVIEWS; i++) {

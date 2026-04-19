@@ -716,6 +716,8 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   width: 100%;
   height: 560px;
+  display: flex;
+  justify-content: center;
 }
 
 .pile-card {
