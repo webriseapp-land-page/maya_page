@@ -716,8 +716,34 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   width: 100%;
   height: 560px;
-  display: flex;
-  justify-content: center;
+  overflow: visible;
+}
+
+/* Inner wrapper that we center and give a fixed width matching card spread */
+.reviews-pile::before {
+  content: none;
+}
+
+.pile-inner {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .pile-inner { width: 340px; }
+}
+
+.pile-inner {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 520px;
+  height: 100%;
 }
 
 .pile-card {
