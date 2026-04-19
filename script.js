@@ -124,41 +124,56 @@ revealEls.forEach(el => revealObserver.observe(el));
 // ===========================
 // REVIEWS GRID
 // ===========================
-const reviewsGrid = document.getElementById('reviewsGrid');
-const totalReviews = 12;
+// ===========================
+// REVIEWS SCATTER PILE
+// ===========================
+const reviewsScatter = document.getElementById('reviewsScatter');
+const TOTAL_REVIEWS = 12;
 
-for (let i = 1; i <= totalReviews; i++) {
-  const thumb = document.createElement('div');
-  thumb.className = 'review-thumb reveal-up';
-  // Staggered delay across the grid (cycle through 4 delay levels)
-  const delayClass = ['', 'delay-1', 'delay-2', 'delay-3'][(i - 1) % 4];
-  if (delayClass) thumb.classList.add(delayClass);
-  thumb.setAttribute('role', 'button');
-  thumb.setAttribute('tabindex', '0');
-  thumb.setAttribute('aria-label', `ביקורת ${i} – לחצי לפתיחה`);
+// Predefined positions (left%, top%, rotation deg, z-index)
+// Arranged to mimic a natural scatter across the container
+const positions = [
+  { l: 2,   t: 5,   r: -8,  z: 3  },
+  { l: 18,  t: 0,   r: 6,   z: 5  },
+  { l: 38,  t: 2,   r: -4,  z: 4  },
+  { l: 56,  t: 0,   r: 9,   z: 6  },
+  { l: 72,  t: 4,   r: -6,  z: 3  },
+  { l: 8,   t: 42,  r: 7,   z: 7  },
+  { l: 26,  t: 38,  r: -11, z: 5  },
+  { l: 45,  t: 40,  r: 5,   z: 8  },
+  { l: 62,  t: 36,  r: -7,  z: 4  },
+  { l: 78,  t: 42,  r: 10,  z: 6  },
+  { l: 16,  t: 75,  r: -5,  z: 5  },
+  { l: 50,  t: 72,  r: 8,   z: 7  },
+];
+
+for (let i = 0; i < TOTAL_REVIEWS; i++) {
+  const p = positions[i];
+  const card = document.createElement('div');
+  card.className = 'scatter-card';
+  card.style.left    = p.l + '%';
+  card.style.top     = p.t + '%';
+  card.style.transform = `rotate(${p.r}deg)`;
+  card.style.zIndex  = p.z;
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-label', `ביקורת ${i + 1} – לחצי לפתיחה`);
 
   const img = document.createElement('img');
-  img.src = `images/review_${i}.jpeg`;
-  img.alt = `ביקורת לקוחה ${i}`;
+  img.src = `images/review_${i + 1}.jpeg`;
+  img.alt = `ביקורת לקוחה ${i + 1}`;
   img.loading = 'lazy';
+  card.appendChild(img);
 
-  const hint = document.createElement('div');
-  hint.className = 'review-tap-hint';
-  hint.textContent = 'לחצי לפתיחה';
-
-  thumb.appendChild(img);
-  thumb.appendChild(hint);
-
-  const openFn = () => openLightbox(`images/review_${i}.jpeg`);
-  thumb.addEventListener('click', openFn);
-  thumb.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openFn(); }
+  const src = `images/review_${i + 1}.jpeg`;
+  card.addEventListener('click', () => openLightbox(src));
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(src); }
   });
 
-  reviewsGrid.appendChild(thumb);
+  reviewsScatter.appendChild(card);
+  revealObserver.observe(card);
 }
-
-document.querySelectorAll('.review-thumb').forEach(el => revealObserver.observe(el));
 
 // ===========================
 // LIGHTBOX
