@@ -701,40 +701,65 @@ a { text-decoration: none; color: inherit; }
 }
 .reviews-sub::after { background: linear-gradient(90deg, rgba(176,125,94,0.3), transparent); }
 
-/* ---- Scatter pile ---- */
-.reviews-scatter {
+/* ---- Phone pile ---- */
+.reviews-pile-wrap {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-pile {
   position: relative;
   width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
   height: 560px;
 }
 
-.scatter-card {
+.pile-card {
   position: absolute;
-  width: 160px;
-  height: 210px;
-  border-radius: 14px;
+  width: 130px;
+  height: 230px;
+  border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 6px 24px rgba(176,125,94,0.2), 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1),
-              box-shadow 0.35s ease,
-              z-index 0s;
   background: white;
   border: 3px solid white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.3s ease;
+  transform-origin: bottom center;
 }
 
-.scatter-card img {
+.pile-card img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
   pointer-events: none;
 }
 
-.scatter-card:hover {
-  transform: scale(1.12) rotate(0deg) !important;
-  box-shadow: 0 20px 50px rgba(176,125,94,0.38), 0 4px 14px rgba(0,0,0,0.15) !important;
-  z-index: 100 !important;
+.pile-card:hover {
+  transform: scale(1.15) rotate(0deg) !important;
+  box-shadow: 0 28px 64px rgba(0,0,0,0.32) !important;
+  z-index: 999 !important;
+}
+
+.reviews-pile-hint {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 13px;
+  margin-top: 24px;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .reviews-pile { height: 420px; }
+  .pile-card { width: 95px; height: 168px; border-radius: 13px; border-width: 2px; }
+}
+@media (max-width: 480px) {
+  .reviews-pile { height: 340px; }
+  .pile-card { width: 78px; height: 138px; border-radius: 11px; }
 }
 
 /* ---- Lightbox ---- */

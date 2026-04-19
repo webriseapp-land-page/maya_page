@@ -125,36 +125,39 @@ revealEls.forEach(el => revealObserver.observe(el));
 // REVIEWS GRID
 // ===========================
 // ===========================
-// REVIEWS SCATTER PILE
+// REVIEWS PHONE PILE
 // ===========================
-const reviewsScatter = document.getElementById('reviewsScatter');
+const reviewsPile = document.getElementById('reviewsPile');
 const TOTAL_REVIEWS = 12;
 
-// Predefined positions (left%, top%, rotation deg, z-index)
-// Arranged to mimic a natural scatter across the container
-const positions = [
-  { l: 2,   t: 5,   r: -8,  z: 3  },
-  { l: 18,  t: 0,   r: 6,   z: 5  },
-  { l: 38,  t: 2,   r: -4,  z: 4  },
-  { l: 56,  t: 0,   r: 9,   z: 6  },
-  { l: 72,  t: 4,   r: -6,  z: 3  },
-  { l: 8,   t: 42,  r: 7,   z: 7  },
-  { l: 26,  t: 38,  r: -11, z: 5  },
-  { l: 45,  t: 40,  r: 5,   z: 8  },
-  { l: 62,  t: 36,  r: -7,  z: 4  },
-  { l: 78,  t: 42,  r: 10,  z: 6  },
-  { l: 16,  t: 75,  r: -5,  z: 5  },
-  { l: 50,  t: 72,  r: 8,   z: 7  },
+// Positions mimic the reference image:
+// Two rows of tall phone cards, fanning out from center with heavy overlap
+// left% and top% are relative to .reviews-pile (100% wide, 560px tall)
+// rotation fans out like a spread hand of cards
+const pilePositions = [
+  { l:  2, t: 18, r: -22, z: 2 },
+  { l:  9, t:  8, r: -14, z: 3 },
+  { l: 18, t:  3, r:  -7, z: 4 },
+  { l: 28, t:  1, r:   0, z: 5 },
+  { l: 38, t:  2, r:   8, z: 6 },
+  { l: 48, t:  6, r:  15, z: 5 },
+  { l: 57, t: 14, r:  22, z: 4 },
+  // second overlapping row slightly lower
+  { l:  6, t: 42, r: -18, z: 7 },
+  { l: 20, t: 34, r: -10, z: 8 },
+  { l: 33, t: 30, r:   3, z: 9 },
+  { l: 46, t: 32, r:  11, z: 8 },
+  { l: 59, t: 38, r:  20, z: 7 },
 ];
 
 for (let i = 0; i < TOTAL_REVIEWS; i++) {
-  const p = positions[i];
+  const p = pilePositions[i];
   const card = document.createElement('div');
-  card.className = 'scatter-card';
-  card.style.left    = p.l + '%';
-  card.style.top     = p.t + '%';
+  card.className = 'pile-card';
+  card.style.left      = p.l + '%';
+  card.style.top       = p.t + '%';
   card.style.transform = `rotate(${p.r}deg)`;
-  card.style.zIndex  = p.z;
+  card.style.zIndex    = p.z;
   card.setAttribute('role', 'button');
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `ביקורת ${i + 1} – לחצי לפתיחה`);
@@ -171,8 +174,7 @@ for (let i = 0; i < TOTAL_REVIEWS; i++) {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(src); }
   });
 
-  reviewsScatter.appendChild(card);
-  revealObserver.observe(card);
+  reviewsPile.appendChild(card);
 }
 
 // ===========================
