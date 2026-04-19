@@ -220,17 +220,29 @@ const formSuccess  = document.getElementById('formSuccess');
 
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
-  const btn = contactForm.querySelector('.btn-primary');
-  const origText = btn.innerHTML;
-  btn.innerHTML = '<span class="btn-text">שולח...</span>';
-  btn.disabled = true;
-  setTimeout(() => {
-    contactForm.reset();
-    btn.innerHTML = origText;
-    btn.disabled = false;
-    formSuccess.classList.add('show');
-    setTimeout(() => formSuccess.classList.remove('show'), 5000);
-  }, 1200);
+
+  const name    = document.getElementById('name').value.trim();
+  const phone   = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
+
+  // Build WhatsApp message
+  let text = `שלום מאיה! 👋\n`;
+  text += `*שם:* ${name}\n`;
+  text += `*טלפון:* ${phone}\n`;
+  if (service) text += `*שירות:* ${service}\n`;
+  if (message) text += `*הודעה:* ${message}`;
+
+  const encoded = encodeURIComponent(text);
+  const waURL   = `https://wa.me/972525541655?text=${encoded}`;
+
+  // Open WhatsApp
+  window.open(waURL, '_blank');
+
+  // Reset form and show success
+  contactForm.reset();
+  formSuccess.classList.add('show');
+  setTimeout(() => formSuccess.classList.remove('show'), 5000);
 });
 
 // ===========================
