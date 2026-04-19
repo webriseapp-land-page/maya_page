@@ -714,31 +714,35 @@ a { text-decoration: none; color: inherit; }
 .reviews-pile {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 520px;
   overflow: hidden;
 }
 
+/* The inner sits dead center - cards use px offsets from center */
 .pile-inner {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
-  width: 560px;
   height: 100%;
+  width: 0;
+  /* cards use negative margins/transforms from this center point */
 }
 
 .pile-card {
   position: absolute;
-  width: 110px;
-  height: 195px;
+  width: 115px;
+  height: 200px;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  background: white;
+  background: #111;
   border: 3px solid white;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12);
   transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+  /* transform-origin at bottom center so rotation fans naturally */
   transform-origin: bottom center;
+  /* left/top set via JS using px from center of pile-inner */
+  margin-left: -57px; /* half card width so left:0 = centered */
 }
 
 .pile-card img {
@@ -749,7 +753,7 @@ a { text-decoration: none; color: inherit; }
 
 .pile-card:hover {
   transform: scale(1.15) rotate(0deg) !important;
-  box-shadow: 0 28px 64px rgba(0,0,0,0.32) !important;
+  box-shadow: 0 28px 64px rgba(0,0,0,0.35) !important;
   z-index: 999 !important;
 }
 
@@ -762,9 +766,14 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 600px) {
-  .reviews-pile { height: 360px; }
-  .pile-inner { width: 320px; }
-  .pile-card { width: 65px; height: 115px; border-radius: 10px; border-width: 2px; }
+  .reviews-pile { height: 380px; }
+  .pile-card {
+    width: 80px;
+    height: 142px;
+    border-radius: 11px;
+    border-width: 2px;
+    margin-left: -40px;
+  }
 }
 
 /* ---- Lightbox ---- */

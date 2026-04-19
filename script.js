@@ -130,34 +130,43 @@ revealEls.forEach(el => revealObserver.observe(el));
 const reviewsPile = document.getElementById('reviewsPile');
 const TOTAL_REVIEWS = 12;
 
-// Create centered inner wrapper
 const pileInner = document.createElement('div');
 pileInner.className = 'pile-inner';
 reviewsPile.appendChild(pileInner);
 
+// px offsets from center (pile-inner left=50% of container)
+// left: px from center (negative = left of center, positive = right)
+// top: px from top of container
+// r: rotation degrees
+// Cards are ~115px wide, centered on left=0 via margin-left:-57px
+const isMobile = window.innerWidth <= 600;
+const scale = isMobile ? 0.65 : 1;
+
 const pilePositions = [
-  { l:  0, t: 15, r: -22, z: 2 },
-  { l:  8, t:  5, r: -14, z: 3 },
-  { l: 17, t:  1, r:  -7, z: 4 },
-  { l: 27, t:  0, r:   0, z: 5 },
-  { l: 37, t:  1, r:   8, z: 6 },
-  { l: 47, t:  5, r:  15, z: 5 },
-  { l: 56, t: 13, r:  22, z: 4 },
-  { l:  4, t: 42, r: -18, z: 7 },
-  { l: 15, t: 33, r: -10, z: 8 },
-  { l: 27, t: 29, r:   3, z: 9 },
-  { l: 39, t: 31, r:  11, z: 8 },
-  { l: 51, t: 37, r:  20, z: 7 },
+  // Row 1 — top fan
+  { x: -240, t: 60,  r: -22, z: 2 },
+  { x: -170, t: 30,  r: -14, z: 3 },
+  { x:  -90, t: 10,  r:  -7, z: 4 },
+  { x:   -5, t:  5,  r:   0, z: 5 },
+  { x:   85, t: 10,  r:   8, z: 6 },
+  { x:  160, t: 28,  r:  15, z: 5 },
+  { x:  225, t: 58,  r:  22, z: 4 },
+  // Row 2 — lower fan
+  { x: -210, t: 200, r: -18, z: 7 },
+  { x: -130, t: 170, r: -10, z: 8 },
+  { x:  -40, t: 155, r:   3, z: 9 },
+  { x:   55, t: 160, r:  11, z: 8 },
+  { x:  145, t: 180, r:  20, z: 7 },
 ];
 
 for (let i = 0; i < TOTAL_REVIEWS; i++) {
   const p = pilePositions[i];
   const card = document.createElement('div');
   card.className = 'pile-card';
-  card.style.left      = p.l + '%';
-  card.style.top       = p.t + '%';
+  card.style.left    = (p.x * scale) + 'px';
+  card.style.top     = (p.t * scale) + 'px';
   card.style.transform = `rotate(${p.r}deg)`;
-  card.style.zIndex    = p.z;
+  card.style.zIndex  = p.z;
   card.setAttribute('role', 'button');
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `ביקורת ${i + 1} – לחצי לפתיחה`);
